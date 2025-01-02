@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Aulab Post</title>
+    <title>Inchiostro | La tua fonte di articoli creativi</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+    <link rel="icon" href="{{ asset('storage/glizzi.webp') }}" type="image/x-icon">
 </head>
 <body>
     <x-navbar/>

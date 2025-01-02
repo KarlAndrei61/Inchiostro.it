@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Inchiostro - Candidatura Ricevuta: {{$info['role']}}</title>
+    <link rel="icon" href="{{ asset('storage/glizzi.webp') }}" type="image/x-icon">
 </head>
 <body>
     <h1>È arrivata una richiesta per il ruolo di {{$info['role']}}</h1>
