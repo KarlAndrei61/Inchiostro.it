@@ -19,7 +19,7 @@ MySQL in locale (utilizza Table Plus o Beekeeper Studio)
 Modifica il file .env con i dettagli del tuo database appena creato:
 
 DB_PORT=  
-DB_DATABASE=  
+DB_DATABASE=   
 DB_USERNAME=  
 DB_PASSWORD=  
 
