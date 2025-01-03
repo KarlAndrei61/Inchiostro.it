@@ -16,32 +16,12 @@
         {{ session('alert') }}
     </div>
     @endif
-    <!-- <div class="container my-5">
-        <h1>Articoli Recenti</h1>
-        <div class="row">
-            @forelse($articles as $article)
-            <div class="col-md-6 col-lg-4 mb-4">
-    <div class="card">
-        <img src="{{Storage::url($article->image)}}" class="card-img-top" alt="Immagine dell'articolo: {{$article->title}}" onerror="console.log('Immagine non trovata:', this.src);">
-        <div class="card-body">
-            <h5 class="card-title">{{ $article->title }}</h5>
-            <h6 class="card-subtitle mb-2 text-muted">{{ $article->subtitle }}</h6>
-            <p class="card-text">{{ Str::limit($article->body, 100) }}</p>
-            <a href="{{route('article.show', $article)}}" class="btn btn-secondary">Leggi di più</a>
-        </div>
-    </div>
-</div>
-            @empty
-                <p>Non ci sono articoli recenti approvati.</p>
-            @endforelse
-        </div>
-    </div> -->
-    <div class="cotainer my-5">
+    <div class="container my-5">
         <div class="row justify-content-evenly">
             @foreach($articles as $article)
-            <div class="col-12 col-md-3">
+            <div class="col-12 col-md-4 col-lg-3 mb-4">
                 <div class="card" style="width: 18rem;">
-                    <img src="{{Storage::url($article->image)}}" alt="Immagine dell'articolo: {{$article->title}}" class="card-img-top">
+                    <img src="{{Storage::url($article->image)}}" alt="Immagine dell'articolo: {{$article->title}}" class="card-img-top img-fluid">
                     <div class="card-body">
                         <h5 class="card-title">{{$article->title}}</h5>
                         <p class="card-subtitle">{{$article->subtitle}}</p>
@@ -56,7 +36,7 @@
                             @foreach($article->tags as $tag)
                             #{{$tag->name}}
                             @endforeach
-                        </p>   
+                        </p>
                     </div>
                     <div class="card-footer d-flex justify-content-between align-items-center">
                         <p>Redatto il {{$article->created_at->format('d/m/Y')}}<br>
@@ -70,4 +50,3 @@
         </div>
     </div>
 </x-layout>
-
