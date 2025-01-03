@@ -14,7 +14,6 @@
         <tr>
             <th scope="row">{{$article->id}}</th>
             <td>{{$article->title}}</td>
-            <td>{{$article->subtitle}}</td>
             <td>{{$article->category->name ?? 'Nessuna categoria'}}</td>
             <td>
                 @foreach($article->tags as $tag)
